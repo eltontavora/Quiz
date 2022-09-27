@@ -1,21 +1,15 @@
 
 
-var resposta1 = document.getElementById("radioquestao1").value;
-var resposta2 = document.getElementById("radioquestao2").value;
+var resposta1 = parseInt(document.getElementById("radioquestao1").value);
+var resposta2 = parseInt(document.getElementById("radioquestao2").value);
 
+//var resp1 = parseInt(document.querySelector('input[id="radioquestao1"]:checked').value);
+//console.log(resp1);
 
+var form = document.querySelector('#questions_box');
+var botao = document.querySelector('#submit1');
 
-var placar = resposta1 + resposta2
-
-function questionario(perguntas) {
-    console.log(questionario);
-    console.log(perguntas);
-}
-
-var perguntas = 0;
-var numero;
-
-document.querySelector('button').onclick = function () {
-    perguntas = perguntas + 1;
-    questionario(perguntas);
-}
+botao.addEventListener('click', function (event) {
+    event.preventDefault();
+    console.log(form.q1.value);
+});
